@@ -1,10 +1,10 @@
 class Guest
 
-  attr_reader( :name, :gender )
+  attr_accessor( :name, :age )
 
-  def initialize( name, gender )
+  def initialize( name, age )
     @name = name
-    @gender = gender
+    @age = age
   end
 
 

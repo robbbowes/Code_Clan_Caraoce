@@ -10,7 +10,7 @@ class TestGuest < Minitest::Test
     @barbara = Guest.new( "Barbara", 56 )
     @janice = Guest.new( "Janice", 53 )
 
-    @boys = []
+    @guys = []
     @gals = []
   end
 
@@ -19,9 +19,15 @@ class TestGuest < Minitest::Test
     assert_equal( "Dave", name )
   end
 
-  def test_group_guests_by_gender
-    men = @group
-  end
+  # def test_group_guests_by_gender
+  #   # arrange
+  #   # act
+  #   @guys.push(@steve)
+  #   @guys.push(@dave)
+  #   # assert
+  #   men_names = @guys[0].name
+  #   assert_equal(["Steve", "Dave"], men_names)
+  # end
 
 
 end
