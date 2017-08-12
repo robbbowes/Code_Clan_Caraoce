@@ -2,6 +2,7 @@ require('minitest/autorun')
 require('minitest/rg')
 require_relative('../room')
 require_relative('../guest')
+require_relative('../song')
 
 class TestRoom < Minitest::Test
 
@@ -44,7 +45,15 @@ class TestRoom < Minitest::Test
 
   def test_add_song_to_room
     room = @room_2.add_song(@the_boys)
-    assert_equal( 1, room.count )
+    room = @room_2.playlist_check
+    assert_equal( 1, room )
+  end
+
+  def test_add_two_songs_to_room
+    @room_2.add_song(@the_boys)
+    @room_2.add_song(@escuela_calor)
+    room = @room_2.playlist_check
+    assert_equal( 2, room )
   end
 
   def test_remove_customer
@@ -79,13 +88,16 @@ class TestRoom < Minitest::Test
     assert_equal( 1, room )
   end
 
-  # def test_
-
+  # def test_fave_song__yes
+  #   @room_1.add_song(@escuela_calor)
+  #   @room_1.add_customer(@dave)
+  #   assert_equal( "Whoo!", @room_1 )
+  # end
+  #
+  # def test_fave_song__no
+  #   @room_1.add_song(@escuela_calor)
+  #   @room_1.add_customer(@steve)
+  #   assert_equal( "nil", @room_1 )
+  # end
 
 end
-
-
-# capacity =
-# if array.count > capacity
-#   return cannot enter
-# else room.push(guest)
