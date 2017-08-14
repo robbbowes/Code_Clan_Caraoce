@@ -24,10 +24,12 @@ class TestSong < Minitest::Test
 
   def test_add_the_boys_to_playlist
     playlist_2 = @playlist_2.push(@the_boys)
-    puts playlist_2
     assert_equal( "The Boys Are Back In Town", playlist_2[0].name )
   end
 
-
+  def test_add_escuela_to_playlist
+    playlist_2 = @playlist_2.push(@escuela_calor)
+    assert_equal( true , playlist_2.include?(@escuela_calor) )
+  end
 
 end

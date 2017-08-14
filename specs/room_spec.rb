@@ -8,14 +8,17 @@ class TestRoom < Minitest::Test
 
   def setup
 
-    @room_1 = Room.new( 1, 2, 10)
-    @room_2 = Room.new( 2, 2, 20)
-    @room_3 = Room.new( 3, 3, 30)
+    @room_1 = Room.new( 1, 2, 10 )
+    @room_2 = Room.new( 2, 2, 20 )
+    @room_3 = Room.new( 3, 3, 30 )
 
     @all_rooms = [@room_1, @room_2, @room_3]
 
+    @escuela_calor = Song.new( "Escuela De Calor", "Radio Futura", "Rock en Español")
+    @all_by_myself = Song.new( "All By Myself", "Céline Dion", "Pop Ballad")
+
     @steve = Guest.new( "Steve", 30, 20, @the_boys )
-    @dave = Guest.new( "Dave", 29, 10, @escuela_calor)
+    @dave = Guest.new( "Dave", 29, 15, @escuela_calor)
     @barbara = Guest.new( "Barbara", 56, 18, @bohemian )
     @janice = Guest.new( "Janice", 53, 2, @all_by_myself )
 
@@ -91,9 +94,12 @@ class TestRoom < Minitest::Test
   # def test_fave_song__yes
   #   @room_1.add_song(@escuela_calor)
   #   @room_1.add_customer(@dave)
-  #   assert_equal( "Whoo!", @room_1 )
-  # end
+  #   room = @room_1.fave_song(@escuela_calor)
+  #   puts room
   #
+  #   assert_equal( "Whoo!", room )
+  # end
+
   # def test_fave_song__no
   #   @room_1.add_song(@escuela_calor)
   #   @room_1.add_customer(@steve)

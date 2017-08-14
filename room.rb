@@ -27,29 +27,15 @@ class Room
 
   def add_customer(guest)
     @room_guests.push(guest) if (@room_guests.count < @capacity) && (guest.money >= @cost)
-    # for guest in @room_guests do
-    #   @room_playlist.include?(@fave_song)
-    #   return "Whoo!"
-    # end
-    # return
-    # puts "Whoo!" if @room_playlist.include?(guest.@fave_song)
   end
 
-  # def fave_song(guest)
-  #   for guest in @room_guests do
-  #     @room_playlist.include?(@fave_song)
+  # def fave_song(song)
+  #   for song in @room_playlist do
+  #     if song.name == @guest.@fave_song
   #     puts "Woo!"
   #   end
+  #   end
   #   return
-  # end
-
-
-
-
-
-
-  # def wallet_check(guest)
-  #   @room_guests.push(name) if guest.money >= @cost
   # end
 
 end

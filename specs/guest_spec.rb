@@ -28,15 +28,4 @@ class TestGuest < Minitest::Test
     assert_equal( 10, wallet)
   end
 
-  # def test_group_guests_by_gender
-  #   # arrange
-  #   # act
-  #   @guys.push(@steve)
-  #   @guys.push(@dave)
-  #   # assert
-  #   men_names = @guys[0].name
-  #   assert_equal(["Steve", "Dave"], men_names)
-  # end
-
-
 end
